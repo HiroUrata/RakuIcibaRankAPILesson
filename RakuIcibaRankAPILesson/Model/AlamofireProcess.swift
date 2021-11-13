@@ -30,10 +30,11 @@ extension AlamofireProcess{
             case .success:
                 
                 let detailData = JSON(response.data as Any)
-                
+                print(detailData)
                 for dataCount in 0..<detailData["Items"].count{
                     
-                    if let getRank = detailData["Items"][dataCount]["Item"]["rank"].string,
+                    
+                    if let getRank = detailData["Items"][dataCount]["Item"]["rank"].int,
                        let getmediumImageUrl = detailData["Items"][dataCount]["Item"]["mediumImageUrls"][0]["imageUrl"].string,
                        let getItemName = detailData["Items"][dataCount]["Item"]["itemName"].string,
                        let getItemPrice = detailData["Items"][dataCount]["Item"]["itemPrice"].string{
@@ -45,6 +46,7 @@ extension AlamofireProcess{
                         
                     }
                 }
+                print(itemDetailResultArray)
                 completion(itemDetailResultArray, nil)
                 
             case .failure(let error):

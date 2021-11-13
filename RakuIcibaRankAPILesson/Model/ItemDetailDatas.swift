@@ -8,7 +8,7 @@
 
 struct ItemDetailDatas{
     
-    let rank:String?
+    let rank:Int?
     let mediumImageURL:String?
     let itemName:String?
     let itemPrice:String?

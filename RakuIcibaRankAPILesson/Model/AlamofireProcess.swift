@@ -59,13 +59,3 @@ extension AlamofireProcess{
 }
 
 
-//extension String{
-//
-//    var urlEncoded:String{
-//
-//        let charset = CharacterSet.alphanumerics.union(.init(charactersIn: "/?-._~"))
-//        let remove = removingPercentEncoding ?? self
-//
-//        return remove.addingPercentEncoding(withAllowedCharacters: charset) ?? remove
-//    }
-//}
